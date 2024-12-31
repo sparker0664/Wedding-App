@@ -4,11 +4,13 @@ import {
     em,
     Group,
     rem,
+    Image,
     useMantineTheme,
 } from "@mantine/core";
 import { Outlet } from "react-router";
 import StandardButton from "./buttons/StandardButton";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import boquet from "../assets/boquet.jpg";
 
 export default function Layout() {
     const [opened, { toggle }] = useDisclosure(false);
@@ -20,22 +22,6 @@ export default function Layout() {
         <AppShell
             header={{ height: menuHeight }}
             footer={{ height: 60 }}
-            aside={{
-                width: 0,
-                breakpoint: 0,
-                collapsed: {
-                    desktop: true,
-                    mobile: true,
-                },
-            }}
-            navbar={{
-                width: 0,
-                breakpoint: 0,
-                collapsed: {
-                    desktop: true,
-                    mobile: true,
-                },
-            }}
             padding="md"
             styles={{
                 header: {
@@ -83,7 +69,14 @@ export default function Layout() {
             </AppShell.Header>
             <AppShell.Navbar />
             <AppShell.Main>
-                <Outlet />
+                <Group>
+                    <Image
+                        w="auto"
+                        fit="contain"
+                        src={boquet}
+                    />
+                    <Outlet />
+                </Group>
             </AppShell.Main>
             <AppShell.Footer>footer</AppShell.Footer>
         </AppShell>

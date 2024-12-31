@@ -1,12 +1,12 @@
 import classes from "./home.module.css";
-import { Container, Title, Text, useMantineTheme } from "@mantine/core";
+import { Container, Title, useMantineTheme } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
 export default function Home() {
     const theme = useMantineTheme();
-    const autoplay = useRef(Autoplay({ delay: 6000 }));
+    const autoplay = useRef(Autoplay({ delay: 5000 }));
     return (
         <Container>
             <Title
@@ -16,10 +16,19 @@ export default function Home() {
             >
                 Fiona Brown & Sean Parker
             </Title>
-            <Text className={classes.cursive}>16/05/2026</Text>
-            <Text className={classes.cursive}>
+            <Title
+                order={3}
+                className={classes.cursive}
+            >
+                16/05/2026
+            </Title>
+            <Title
+                order={3}
+                className={classes.cursive}
+                mb="lg"
+            >
                 Please join us on our special day where we tie the knot
-            </Text>
+            </Title>
             <Carousel
                 pt="lg"
                 slideSize="70%"
