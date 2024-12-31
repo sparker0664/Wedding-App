@@ -1,4 +1,4 @@
-import { AppShell, Group, useMantineTheme } from "@mantine/core";
+import { AppShell, Group, rem, useMantineTheme } from "@mantine/core";
 import { Outlet } from "react-router";
 import StandardButton from "./buttons/StandardButton";
 
@@ -8,7 +8,22 @@ export default function Layout() {
         <AppShell
             header={{ height: 60 }}
             footer={{ height: 60 }}
-            navbar={{ width: "1px" }}
+            aside={{
+                width: 0,
+                breakpoint: 0,
+                collapsed: {
+                    desktop: true,
+                    mobile: true,
+                },
+            }}
+            navbar={{
+                width: 0,
+                breakpoint: 0,
+                collapsed: {
+                    desktop: true,
+                    mobile: true,
+                },
+            }}
             padding="md"
             styles={{
                 header: {
@@ -21,6 +36,12 @@ export default function Layout() {
                 },
                 main: {
                     backgroundColor: theme.colors.buttercream[2],
+                    width: rem("100vw"),
+                    borderLeft: 0,
+                    borderRight: 0,
+                },
+                navbar: {
+                    width: rem("0vw"),
                 },
             }}
         >
