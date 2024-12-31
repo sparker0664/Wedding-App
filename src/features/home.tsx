@@ -1,46 +1,43 @@
-import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "../vite.svg";
 import classes from "./home.module.css";
+import { Container, Title, Text, useMantineTheme } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 export default function Home() {
-    const [count, setCount] = useState(0);
+    const theme = useMantineTheme();
+    const autoplay = useRef(Autoplay({ delay: 6000 }));
     return (
-        <>
-            <div>
-                <a
-                    href="https://vite.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={viteLogo}
-                        className={classes.logo}
-                        alt="Vite logo"
-                    />
-                </a>
-                <a
-                    href="https://react.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={reactLogo}
-                        className={classes.logo}
-                        alt="React logo"
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className={classes.card}>
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className={classes.readTheDocs}>
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
+        <Container>
+            <Title
+                className={classes.cursive}
+                c={theme.colors.charcoalGray[5]}
+                order={1}
+            >
+                Fiona Brown & Sean Parker
+            </Title>
+            <Text className={classes.cursive}>16/05/2026</Text>
+            <Text className={classes.cursive}>
+                Please join us on our special day where we tie the knot
+            </Text>
+            <Carousel
+                pt="lg"
+                slideSize="70%"
+                height={200}
+                slideGap="md"
+                loop
+                draggable={false}
+                withControls={false}
+                plugins={[autoplay.current]}
+                onMouseEnter={autoplay.current.stop}
+                onMouseLeave={autoplay.current.reset}
+            >
+                <Carousel.Slide>1</Carousel.Slide>
+                <Carousel.Slide>2</Carousel.Slide>
+                <Carousel.Slide>3</Carousel.Slide>
+                <Carousel.Slide>4</Carousel.Slide>
+                <Carousel.Slide>5</Carousel.Slide>
+            </Carousel>
+        </Container>
     );
 }
