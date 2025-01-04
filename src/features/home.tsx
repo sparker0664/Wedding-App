@@ -1,12 +1,11 @@
 import classes from "./home.module.css";
-import { Container, Title, useMantineTheme, Image } from "@mantine/core";
+import { Container, Title, Image, rem } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import imagePaths from "../index";
 
 export default function Home() {
-  const theme = useMantineTheme();
   const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   const slideshowSlides = imagePaths.map((src) => (
@@ -17,11 +16,7 @@ export default function Home() {
 
   return (
     <Container>
-      <Title
-        className={classes.cursive}
-        c={theme.colors.charcoalGray[5]}
-        order={1}
-      >
+      <Title className={classes.cursive} size={rem(60)}>
         Fiona Brown & Sean Parker
       </Title>
       <Title order={3} className={classes.cursive}>

@@ -1,10 +1,4 @@
 .cursive {
-    font-family: cursive;
-}
-
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  font-family: cursive;
+  color: var(--mantine-color-charcoalGray-5);
 }

@@ -8,27 +8,23 @@ import {
 } from "@mantine/core";
 import { Outlet } from "react-router";
 import StandardButton from "./buttons/StandardButton";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 
 export default function Layout() {
   const [opened, { toggle }] = useDisclosure(false);
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const menuHeight = opened && isMobile ? 200 : 60;
+  const pinned = useHeadroom({ fixedAt: 120 });
   const theme = useMantineTheme();
   return (
     <AppShell
-      header={{ height: menuHeight }}
-      footer={{ height: 60 }}
+      header={{ height: menuHeight, collapsed: !pinned }}
       padding="md"
       styles={{
         header: {
           backgroundColor: theme.colors.lavender[0],
           color: theme.colors.charcoalGray[3],
           fontFamily: "cursive",
-        },
-        footer: {
-          backgroundColor: theme.colors.mintGreen[0],
-          color: theme.colors.gold[0],
         },
         main: {
           backgroundColor: theme.colors.buttercream[3],
@@ -61,7 +57,6 @@ export default function Layout() {
           <Outlet />
         </Group>
       </AppShell.Main>
-      <AppShell.Footer>footer</AppShell.Footer>
     </AppShell>
   );
 }
