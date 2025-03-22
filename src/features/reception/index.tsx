@@ -15,6 +15,7 @@ export default function ReceptionPage(){
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <Card.Section>
           <Image
+            className={localClasses.image}
             src={reception}
             height={500}
           />
@@ -24,10 +25,17 @@ export default function ReceptionPage(){
           {badge}
         </Group>
 
-        <Text size="sm" c="dimmed">
-          With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-          activities on and around the fjords of Norway
+        <Text className={classes.paragraph}>
+          The reception will take place at Anne of Cleves Barn in Great Bardfield.
+          This estate was gifted to Anne of Cleves by Henry VIII as part of their divorce settlement.
+          The reception will start at 4pm with drinks on arrival.
+          We will then have a wedding lunch followed by speeches and some entertainment arranged by Daniel.
+          The evening reception will start at 7pm with a some food and dancing.
+          Guests can explore the grounds for pictures and there is a car park on site where guests can leave
+          their cars overnight.
+          Guests must be off the premises by 12am.
         </Text>
+        <Text className={localClasses.boldParagraph} fw={700}>Taxis must be booked in advance as there is no taxi rank in Great Bardfield!</Text>
       </Card>
     </Container>
   )
