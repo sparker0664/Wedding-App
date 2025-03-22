@@ -1,8 +1,11 @@
-﻿import { Card, Container, Group, Text, Image, Title, rem, Badge } from "@mantine/core";
+﻿import { Card, Container, Group, Text, Image, Title, rem, Badge, em } from "@mantine/core";
 import church from "./../../assets/church/stMarysBocking.jpg";
 import classes from "../../global.module.css";
 import localClasses from "./church.module.css";
+import { useMediaQuery } from "@mantine/hooks";
 export default function ChurchPage(){
+  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const badgeSize = isMobile ? "md" : "lg";
   return(
     <Container>
       <Title className={classes.title} size={rem(60)}>St Marys Church Bocking</Title>
@@ -16,11 +19,11 @@ export default function ChurchPage(){
         </Card.Section>
 
         <Group justify="flex-end" mt="md" mb="xs">
-          <Badge size={"xl"}>Address: Church St, Bocking CM7 5SR</Badge>
+          <Badge className={localClasses.badge} size={badgeSize}>Address: Church St, Bocking CM7 5SR</Badge>
         </Group>
 
         <Text className={classes.paragraph}>
-          St Mary's Church Bocking is a beautiful church located in the heart of Bocking.
+          St Mary's Church is a beautiful church located in the heart of Bocking.
           Bocking itself is a small village located in the Braintree district of Essex, England.
           This is where we will be getting married and we would love for you to join us.
           The service starts at 2pm and we will be taking photos after the service.
