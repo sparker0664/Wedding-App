@@ -36,13 +36,13 @@ export default function Layout() {
         },
       }}
     >
-      <AppShell.Header pt="sm" pr="sm" mb="sm">
+      <AppShell.Header pt="sm" pr="sm" mb="xs">
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
         {(opened || !isMobile) && (
           <Group justify="Center">
             <Button className={classes.navButton} component={Link} to={"home"}>Home</Button>
             <Button className={classes.navButton} component={Link} to={"church"}>Church</Button>
-            <Button className={classes.navButton}>Reception</Button>
+            <Button className={classes.navButton} component={Link} to={"reception"}>Reception</Button>
             <Button className={classes.navButton}>Hotels & accommodation</Button>
             <Button className={classes.navButton}>Taxi services</Button>
             <Button className={classes.navButton}>Gift list</Button>

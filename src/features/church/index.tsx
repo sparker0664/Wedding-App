@@ -1,7 +1,7 @@
-﻿import { Card, Container, Group, Text, Image, Title, rem } from "@mantine/core";
+﻿import { Card, Container, Group, Text, Image, Title, rem, Badge } from "@mantine/core";
 import church from "./../../assets/church/stMarysBocking.jpg";
-import classes from "../../global.module.css"
-import localClasses from "./church.module.css"
+import classes from "../../global.module.css";
+import localClasses from "./church.module.css";
 export default function ChurchPage(){
   return(
     <Container>
@@ -9,13 +9,14 @@ export default function ChurchPage(){
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <Card.Section>
           <Image
+            className={localClasses.image}
             src={church}
             height={500}
           />
         </Card.Section>
 
         <Group justify="flex-end" mt="md" mb="xs">
-          <Text className={localClasses.address}>Address: Church St, Bocking CM7 5SR</Text>
+          <Badge size={"xl"}>Address: Church St, Bocking CM7 5SR</Badge>
         </Group>
 
         <Text className={classes.paragraph}>

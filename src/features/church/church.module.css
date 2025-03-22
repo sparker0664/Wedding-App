@@ -1,5 +1,3 @@
-﻿.address {
-    font-family: var(--mantine-font-family);
-    color: var(--mantine-primary-color-8);
-    font-weight: bold;
+﻿.image{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }

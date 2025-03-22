@@ -1,10 +1,12 @@
 import classes from "../../global.module.css";
+import localClasses from "./home.module.css";
 import { Container, Title, Image, rem, SimpleGrid, Card, Text, em } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import imagePaths from "../../index.ts";
 import { useMediaQuery } from "@mantine/hooks";
+import { IconHeart } from "@tabler/icons-react";
 
 export default function HomePage() {
   const autoplay = useRef(Autoplay({ delay: 5000 }));
@@ -40,6 +42,9 @@ export default function HomePage() {
       >
         {slideshowSlides}
       </Carousel>
+      <div className={localClasses.divider}>
+        <IconHeart className={localClasses.icon}/>
+      </div>
       <SimpleGrid
       cols={{ base: 1, sm: 2, lg: 2 }}>
         <Card>
