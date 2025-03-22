@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./features/home";
+import HomePage from "./features/home";
 import Root from "./root";
 import Layout from "./components/layout";
+import ChurchPage from "./features/church";
 
 export default function Router() {
     return (
@@ -15,7 +16,13 @@ export default function Router() {
                 <Route element={<Layout />}>
                     <Route
                         path="home"
-                        element={<Home />}
+                        element={<HomePage />}
+                    />
+                </Route>
+                <Route element={<Layout />}>
+                    <Route
+                      path="church"
+                      element={<ChurchPage />}
                     />
                 </Route>
             </Routes>

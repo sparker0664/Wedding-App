@@ -1,15 +1,15 @@
 import {
   AppShell,
   Burger,
+  Button,
   em,
   Group,
   rem,
   useMantineTheme,
 } from "@mantine/core";
-import { Outlet } from "react-router";
-import StandardButton from "./buttons/StandardButton";
+import { Link, Outlet } from "react-router";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
-
+import classes from "./layout.module.css"
 export default function Layout() {
   const [opened, { toggle }] = useDisclosure(false);
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
@@ -22,12 +22,11 @@ export default function Layout() {
       padding="md"
       styles={{
         header: {
-          backgroundColor: theme.colors.lavender[0],
-          color: theme.colors.charcoalGray[3],
-          fontFamily: "cursive",
+          background: "linear-gradient(to bottom, #f7f3fa, #ffffff)",
+          fontFamily: theme.fontFamily,
         },
         main: {
-          backgroundColor: theme.colors.buttercream[3],
+          background: "linear-gradient(to bottom, #f7f3fa, #ffffff)",
           width: rem("100vw"),
           borderLeft: 0,
           borderRight: 0,
@@ -41,13 +40,12 @@ export default function Layout() {
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
         {(opened || !isMobile) && (
           <Group justify="Center">
-            <StandardButton>Home</StandardButton>
-            <StandardButton>Church</StandardButton>
-            <StandardButton>Reception</StandardButton>
-            <StandardButton>RSVP</StandardButton>
-            <StandardButton>Hotels & accommodation</StandardButton>
-            <StandardButton>Taxi services</StandardButton>
-            <StandardButton>Gift list</StandardButton>
+            <Button className={classes.navButton} component={Link} to={"home"}>Home</Button>
+            <Button className={classes.navButton} component={Link} to={"church"}>Church</Button>
+            <Button className={classes.navButton}>Reception</Button>
+            <Button className={classes.navButton}>Hotels & accommodation</Button>
+            <Button className={classes.navButton}>Taxi services</Button>
+            <Button className={classes.navButton}>Gift list</Button>
           </Group>
         )}
       </AppShell.Header>

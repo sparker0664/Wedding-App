@@ -5,9 +5,9 @@ import "./App.css";
 import Router from "./Router";
 
 const floralWeddingTheme = createTheme({
-    fontFamily: "Open Sans, sans-serif", // Body text
+    fontFamily: "Playfair Display, serif", // Body text
     headings: {
-        fontFamily: "Playfair Display, serif", // Headers
+        fontFamily: "Great Vibes, cursive", // Headers
     },
     colors: {
         blushPink: [
@@ -95,7 +95,7 @@ const floralWeddingTheme = createTheme({
             "#141414", // Darkest
         ],
     },
-    primaryColor: "blushPink",
+    primaryColor: "lavender",
 });
 
 function App() {

@@ -1,0 +1,9 @@
+﻿.title {
+    font-family: var(--mantine-font-family-headings);
+    color: var(--mantine-primary-color-8);
+}
+
+.paragraph{
+    font-family: var(--mantine-font-family);
+    color: var(--mantine-primary-color-8);
+}
