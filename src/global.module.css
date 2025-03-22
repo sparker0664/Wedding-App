@@ -1,12 +1,6 @@
 ﻿.title {
     font-family: var(--mantine-font-family-headings);
     color: var(--mantine-primary-color-8);
-    font-size: 5rem;
-}
-
-.subTitle {
-    font-family: var(--mantine-font-family-headings);
-    color: var(--mantine-primary-color-8);
 }
 
 .paragraph{
