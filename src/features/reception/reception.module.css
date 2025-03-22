@@ -1,0 +1,12 @@
+﻿.badge{
+    background-color: var(--mantine-primary-color-8);
+    font-family: var(--mantine-font-family);
+}
+
+.mobileBadge{
+    background-color: var(--mantine-primary-color-8);
+    color: var(--mantine-color-white);
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: var(--mantine-font-family);
+}
