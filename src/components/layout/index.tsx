@@ -22,7 +22,7 @@ export default function Layout() {
       padding="md"
       styles={{
         header: {
-          background: "linear-gradient(to bottom, #f7f3fa, #ffffff)",
+          background: "#dcc7f5",
           fontFamily: theme.fontFamily,
         },
         main: {

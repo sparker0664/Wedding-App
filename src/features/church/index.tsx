@@ -1,4 +1,4 @@
-﻿import { Card, Container, Group, Text, Image, Button, Title, rem } from "@mantine/core";
+﻿import { Card, Container, Group, Text, Image, Title, rem } from "@mantine/core";
 import church from "./../../assets/church/stMarysBocking.jpg";
 import classes from "../../global.module.css"
 import localClasses from "./church.module.css"
@@ -10,7 +10,7 @@ export default function ChurchPage(){
         <Card.Section>
           <Image
             src={church}
-            height={300}
+            height={500}
           />
         </Card.Section>
 
@@ -25,11 +25,9 @@ export default function ChurchPage(){
           The service starts at 2pm and we will be taking photos after the service.
           All are welcome to the service, however, the wedding lunch is invite only.
           Evening guests are welcome to join the evening reception at 7pm.
+          There is outside parking near the church and a small car park across the road
+          from the church. We look forward to seeing you there.
         </Text>
-
-        <Button color="blue" fullWidth mt="md" radius="md">
-          Book classic tour now
-        </Button>
       </Card>
     </Container>
   )
