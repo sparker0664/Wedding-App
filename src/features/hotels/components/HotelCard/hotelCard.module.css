@@ -1,0 +1,36 @@
+﻿.button {
+    background-color: var(--mantine-primary-color-8);
+    margin-top: var(--mantine-spacing-sm);
+}
+
+.badge {
+    background-color: var(--mantine-primary-color-8);
+    margin-top: var(--mantine-spacing-xs);
+}
+
+.card {
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: var(--mantine-shadow-sm);
+    padding: var(--mantine-spacing-sm);
+    border-radius: var(--mantine-radius-md);
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Slight darkening */
+}
+
+.paragraph {
+    font-family: var(--mantine-font-family);
+    color: var(--mantine-primary-color-8);
+    font-size: var(--mantine-font-size-lg);
+    line-height: var(--mantine-line-height-md);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-left: var(--mantine-spacing-sm);
+    padding-right: var(--mantine-spacing-sm);
+    margin-top: var(--mantine-spacing-sm);
+}
+
+.image {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}

@@ -43,7 +43,7 @@ export default function Layout() {
             <Button className={classes.navButton} component={Link} to={"home"}>Home</Button>
             <Button className={classes.navButton} component={Link} to={"church"}>Church</Button>
             <Button className={classes.navButton} component={Link} to={"reception"}>Reception</Button>
-            <Button className={classes.navButton}>Hotels & accommodation</Button>
+            <Button className={classes.navButton} component={Link} to={"hotels"}>Hotels</Button>
             <Button className={classes.navButton}>Taxi services</Button>
             <Button className={classes.navButton}>Gift list</Button>
           </Group>

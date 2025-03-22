@@ -4,6 +4,7 @@ import Root from "./root";
 import Layout from "./components/layout";
 import ChurchPage from "./features/church";
 import ReceptionPage from "./features/reception";
+import HotelsPage from "./features/hotels";
 
 export default function Router() {
     return (
@@ -30,6 +31,12 @@ export default function Router() {
                     <Route
                       path="reception"
                       element={<ReceptionPage />}
+                    />
+                </Route>
+                <Route element={<Layout />}>
+                    <Route
+                      path="hotels"
+                      element={<HotelsPage />}
                     />
                 </Route>
             </Routes>
