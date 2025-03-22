@@ -1,5 +1,5 @@
 import classes from "../../global.module.css";
-import { Container, Title, Image, rem, SimpleGrid, Card, Text, em } from "@mantine/core";
+import { Container, Title, Image, SimpleGrid, Card, Text, em } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
@@ -19,13 +19,13 @@ export default function HomePage() {
 
   return (
     <Container>
-      <Title className={classes.title} size={rem(60)}>
+      <Title className={classes.title}>
         Fiona Brown & Sean Parker
       </Title>
-      <Title className={classes.title}>
+      <Title className={classes.subTitle}>
         16/05/2026
       </Title>
-      <Title className={classes.title} >
+      <Title className={classes.subTitle} >
         Please join us on our special day where we tie the knot
       </Title>
       <Carousel
@@ -43,7 +43,7 @@ export default function HomePage() {
       <SimpleGrid
       cols={{ base: 1, sm: 2, lg: 2 }}>
         <Card>
-          <Title className={classes.title}>Day Guest Information</Title>
+          <Title className={classes.subTitle}>Day Guest Information</Title>
           <Text className={classes.paragraph}>
             The ceremony will take place at 1pm at the church. We will then take photos are the church
             before heading to the reception venue. The reception will start at 2pm where there will be a wedding lunch,
@@ -51,7 +51,7 @@ export default function HomePage() {
           </Text>
         </Card>
         <Card>
-          <Title className={classes.title}>Evening Guest</Title>
+          <Title className={classes.subTitle}>Evening Guest</Title>
           <Text className={classes.paragraph}>
             The evening will kick off at the reception venue at
             approximately 7pm. We will have a live DJ and intend to dance the
