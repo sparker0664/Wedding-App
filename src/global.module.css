@@ -1,11 +1,11 @@
 ﻿.title {
-    font-family: var(--mantine-font-family-headings);
-    color: var(--mantine-primary-color-8);
+  font-family: var(--mantine-font-family-headings);
+  color: var(--mantine-primary-color-8);
 }
 
-.paragraph{
-    font-family: var(--mantine-font-family);
-    color: var(--mantine-primary-color-8);
-    font-size: var(--mantine-font-size-lg);
-    line-height: var(--mantine-line-height-md);
+.paragraph {
+  font-family: var(--mantine-font-family);
+  color: var(--mantine-primary-color-8);
+  font-size: var(--mantine-font-size-lg);
+  line-height: var(--mantine-line-height-md);
 }

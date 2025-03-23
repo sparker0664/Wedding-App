@@ -9,7 +9,7 @@ import {
 } from "@mantine/core";
 import { Link, Outlet } from "react-router";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
-import classes from "./layout.module.css"
+import classes from "./layout.module.css";
 export default function Layout() {
   const [opened, { toggle }] = useDisclosure(false);
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
@@ -40,11 +40,33 @@ export default function Layout() {
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
         {(opened || !isMobile) && (
           <Group justify="Center">
-            <Button className={classes.navButton} component={Link} to={"home"}>Home</Button>
-            <Button className={classes.navButton} component={Link} to={"church"}>Church</Button>
-            <Button className={classes.navButton} component={Link} to={"reception"}>Reception</Button>
-            <Button className={classes.navButton} component={Link} to={"hotels"}>Hotels</Button>
-            <Button className={classes.navButton}>Taxi services</Button>
+            <Button className={classes.navButton} component={Link} to={"home"}>
+              Home
+            </Button>
+            <Button
+              className={classes.navButton}
+              component={Link}
+              to={"church"}
+            >
+              Church
+            </Button>
+            <Button
+              className={classes.navButton}
+              component={Link}
+              to={"reception"}
+            >
+              Reception
+            </Button>
+            <Button
+              className={classes.navButton}
+              component={Link}
+              to={"hotels"}
+            >
+              Hotels
+            </Button>
+            <Button className={classes.navButton} component={Link} to={"taxis"}>
+              Taxi services
+            </Button>
             <Button className={classes.navButton}>Gift list</Button>
           </Group>
         )}

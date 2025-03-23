@@ -1,9 +1,4 @@
-﻿import {
-  Container,
-  rem,
-  Title,
-  Stack,
-} from "@mantine/core";
+﻿import { Container, rem, Title, Stack } from "@mantine/core";
 import classes from "../../global.module.css";
 import premierInn from "../../assets/hotels/premierInn.jpg";
 import travelLodge from "../../assets/hotels/travelLodge.jpg";
@@ -15,13 +10,15 @@ import HotelCard from "./components/HotelCard/HotelCard.tsx";
 const imageMap: { [key: string]: string } = {
   "../../assets/hotels/premierInn.jpg": premierInn,
   "../../assets/hotels/travelLodge.jpg": travelLodge,
-  "../../assets/hotels/whiteHeartBraintree.jpg":whiteHartBraintree
+  "../../assets/hotels/whiteHeartBraintree.jpg": whiteHartBraintree,
 };
 
-export default function HotelsPage(){
+export default function HotelsPage() {
   return (
     <Container>
-      <Title className={classes.title} size={rem(60)}>Hotels</Title>
+      <Title className={classes.title} size={rem(60)}>
+        Hotels
+      </Title>
       <Stack mt="md">
         {hotels.map((hotel, index) => (
           <HotelCard
@@ -35,5 +32,5 @@ export default function HotelsPage(){
         ))}
       </Stack>
     </Container>
-  )
+  );
 }
