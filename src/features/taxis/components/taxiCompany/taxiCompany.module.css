@@ -1,0 +1,10 @@
+﻿.card {
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: var(--mantine-shadow-sm);
+    padding: var(--mantine-spacing-sm);
+    border-radius: var(--mantine-radius-md);
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
