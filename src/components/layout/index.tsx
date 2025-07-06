@@ -14,19 +14,19 @@ export default function Layout() {
   const [opened, { toggle }] = useDisclosure(false);
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const menuHeight = opened && isMobile ? 200 : 60;
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 0 });
   const theme = useMantineTheme();
   return (
     <AppShell
-      header={{ height: menuHeight, collapsed: !pinned }}
+      header={{ height: menuHeight, collapsed: !pinned && isMobile }}
       padding="md"
       styles={{
         header: {
-          background: "#dcc7f5",
+          background: "#3b724e",
           fontFamily: theme.fontFamily,
         },
         main: {
-          background: "linear-gradient(to bottom, #f7f3fa, #ffffff)",
+          background: "white",
           width: rem("100vw"),
           borderLeft: 0,
           borderRight: 0,
@@ -77,6 +77,7 @@ export default function Layout() {
           <Outlet />
         </Group>
       </AppShell.Main>
+      <AppShell.Footer />
     </AppShell>
   );
 }

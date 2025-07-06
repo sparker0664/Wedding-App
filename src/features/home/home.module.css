@@ -11,15 +11,17 @@
   content: "";
   flex: 1;
   height: 2px;
+  /*noinspection CssUnresolvedCustomProperty*/
   background: linear-gradient(
     to right,
-    var(--mantine-primary-color-0),
-    var(--mantine-primary-color-9),
-    var(--mantine-primary-color-0)
+    var(--mantine-color-secondaryGold-0),
+    var(--mantine-color-secondaryGold-9),
+    var(--mantine-color-secondaryGold-0)
   );
   border-radius: 10px;
 }
 
+/*noinspection CssUnresolvedCustomProperty*/
 .icon {
-  color: var(--mantine-primary-color-8);
+  color: var(--mantine-color-secondaryGold-9);
 }

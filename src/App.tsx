@@ -94,8 +94,32 @@ const floralWeddingTheme = createTheme({
       "#292929",
       "#141414", // Darkest
     ],
+    poshGreen: [
+      "#f3f7f4",
+      "#e7eae8",
+      "#cad5ce",
+      "#aabfb1",
+      "#8fac99",
+      "#7ea089",
+      "#749a81",
+      "#62866e",
+      "#557861",
+      "#466851",
+    ],
+    secondaryGold: [
+      "#faf9f0",
+      "#f2f1e1",
+      "#e5e1bc",
+      "#d8d095",
+      "#ccc273",
+      "#c5b95e",
+      "#c1b552",
+      "#aa9f42",
+      "#978d39",
+      "#82792b",
+    ],
   },
-  primaryColor: "lavender",
+  primaryColor: "poshGreen",
 });
 
 function App() {
