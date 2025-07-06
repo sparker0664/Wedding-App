@@ -22,11 +22,11 @@ export default function Layout() {
       padding="md"
       styles={{
         header: {
-          background: "#dcc7f5",
+          background: "#3b724e",
           fontFamily: theme.fontFamily,
         },
         main: {
-          background: "linear-gradient(to bottom, #f7f3fa, #ffffff)",
+          background: "white",
           width: rem("100vw"),
           borderLeft: 0,
           borderRight: 0,
@@ -77,6 +77,7 @@ export default function Layout() {
           <Outlet />
         </Group>
       </AppShell.Main>
+      <AppShell.Footer />
     </AppShell>
   );
 }

@@ -53,7 +53,7 @@ export default function HomePage() {
         <IconHeart className={localClasses.icon} />
       </div>
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
-        <Card>
+        <Card className={classes.card}>
           <Title className={classes.title}>Day Guest Information</Title>
           <Text className={classes.paragraph}>
             The ceremony will take place at 2pm at the church. We will then take
@@ -63,7 +63,7 @@ export default function HomePage() {
             fun and games before kicking off the evening at 7pm.
           </Text>
         </Card>
-        <Card>
+        <Card className={classes.card}>
           <Title className={classes.title}>Evening Guest</Title>
           <Text className={classes.paragraph}>
             The evening will kick off at the reception venue at approximately
