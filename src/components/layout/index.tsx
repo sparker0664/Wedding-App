@@ -14,11 +14,11 @@ export default function Layout() {
   const [opened, { toggle }] = useDisclosure(false);
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const menuHeight = opened && isMobile ? 200 : 60;
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 0 });
   const theme = useMantineTheme();
   return (
     <AppShell
-      header={{ height: menuHeight, collapsed: !pinned }}
+      header={{ height: menuHeight, collapsed: !pinned && isMobile }}
       padding="md"
       styles={{
         header: {
