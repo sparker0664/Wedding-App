@@ -33,15 +33,25 @@ export default function ChurchPage() {
         </Group>
 
         <Text className={classes.paragraph}>
-          St Mary's Church is a beautiful church located in the heart of
-          Bocking. Bocking itself is a small village located in the Braintree
-          district of Essex, England. This is where we will be getting married
-          and we would love for you to join us. The service starts at 2pm and we
-          will be taking photos after the service. All are welcome to the
-          service, however, the wedding lunch is invite only. Evening guests are
-          welcome to join the evening reception at 7pm. There is outside parking
-          near the church and a small car park across the road from the church.
-          We look forward to seeing you there.
+          We will be getting married at St Mary's Church in Bocking, Essex. This
+          beautiful church is where Sean's grandparents go to church each week,
+          and where they got married too. All are welcome to the service,
+          however the wedding dinner is invite only.
+        </Text>
+        <Text className={classes.paragraph}>
+          <Text component={"span"} inherit inline fw={700}>
+            Transport:
+          </Text>{" "}
+          The nearest train station is Braintree, which is a 7 minute drive or
+          45 minute walk from the church.
+        </Text>
+        <Text className={classes.paragraph}>
+          <Text component={"span"} inherit inline fw={700}>
+            Parking:
+          </Text>{" "}
+          There is a small car park directly outside the church. But don't block
+          the entrance for the bride! There is also street parking available on
+          Church Street and the surrounding roads.
         </Text>
       </Card>
     </Container>
