@@ -35,8 +35,8 @@ export default function ChurchPage() {
         <Text className={classes.paragraph}>
           We will be getting married at St Mary's Church in Bocking, Essex. This
           beautiful church is where Sean's grandparents go to church each week,
-          and where they got married too. All are welcome to the service,
-          however the wedding dinner is invite only.
+          and where they got married too. All are welcome to the church service,
+          however the wedding reception is invite only.
         </Text>
         <Text className={classes.paragraph}>
           <Text component={"span"} inherit inline fw={700}>
