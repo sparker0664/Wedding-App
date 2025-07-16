@@ -30,7 +30,7 @@ export default function ReceptionPage() {
   return (
     <Container>
       <Title className={classes.title} size={rem(60)}>
-        Anne of Cleves Barn
+        Anne of Cleves Barn & Bardfield Vineyard
       </Title>
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <Card.Section>
