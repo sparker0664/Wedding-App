@@ -1,15 +1,11 @@
 ﻿.navButton {
   color: var(--mantine-primary-color-9);
   background-color: #ffffff;
-  /*noinspection CssUnresolvedCustomProperty*/
   border: var(--mantine-color-secondaryGold-9) 3px solid;
   border-radius: 20px;
-  padding: 10px 20px;
   transition: all 0.3s ease;
 }
 .navButton:hover {
-  background-color: var(--mantine-primary-color-2);
-  /*noinspection CssUnresolvedCustomProperty*/
-  border: var(--mantine-color-secondaryGold-0) 1px solid;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: var(--mantine-color-secondaryGold-9) 2px solid;
+  background-color: var(--mantine-primary-color-9);
 }
