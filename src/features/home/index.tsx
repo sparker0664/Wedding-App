@@ -35,7 +35,7 @@ export default function HomePage() {
       </Title>
       <Title className={classes.title}>16/05/2026</Title>
       <Title className={classes.title}>
-        Please join us on our special day where we tie the knot
+        Please join us on our special day as we tie the knot
       </Title>
       <Carousel
         pt="xs"
@@ -54,22 +54,26 @@ export default function HomePage() {
       </div>
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
         <Card className={classes.card}>
-          <Title className={classes.title}>Day Guest Information</Title>
+          <Title className={classes.title}>Day Guests </Title>
           <Text className={classes.paragraph}>
-            The ceremony will take place at 2pm at the church. We will then take
-            photos are the church before heading to the reception venue. The
-            reception will start at 4pm where there will be a wedding lunch,
-            followed by speeches and cake cutting. Daniel is going to run some
-            fun and games before kicking off the evening at 7pm.
+            You are invited to join us for our wedding ceremony at St Mary's
+            Church, the drinks reception and dinner at Anne of Cleves Barn, and
+            the evening disco that follows.
+            <Text className={localClasses.boldParagraph} fw={700}>
+              Please RSVP with your dietary requirements by 1st March 2026.
+            </Text>
           </Text>
         </Card>
         <Card className={classes.card}>
-          <Title className={classes.title}>Evening Guest</Title>
+          <Title className={classes.title}>Evening Guests</Title>
           <Text className={classes.paragraph}>
-            The evening will kick off at the reception venue at approximately
-            7pm. We will have a live DJ and intend to dance the night away.
-            There will be also a selection of evening food that guests are more
-            than welcome to.
+            The evening disco will kick off at the reception venue at
+            approximately 7pm. You are welcome to join us at the church ceremony
+            too, but please arrange your own dinner plans.
+            <Text className={localClasses.boldParagraph} fw={700}>
+              If you fancy hearty pub grub, we recommend the Retreat, opposite
+              St Mary's Church.
+            </Text>
           </Text>
         </Card>
       </SimpleGrid>
