@@ -1,18 +1,16 @@
 ﻿.title {
-  font-family: var(--mantine-font-family-headings);
+  font-family: var(--mantine-font-family-headings), serif;
   color: var(--mantine-primary-color-9);
 }
 
 .paragraph {
-  font-family: var(--mantine-font-family);
+  font-family: var(--mantine-font-family), serif;
   color: var(--mantine-primary-color-8);
   font-size: var(--mantine-font-size-lg);
   line-height: var(--mantine-line-height-md);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
 .card {
-  border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-  linear-gradient(135deg, var(--mantine-color-secondaryGold-9), var(--mantine-color-secondaryGold-5)) border-box;
+  border: var(--mantine-color-secondaryGold-5) 2px solid;
+  border-radius: 20px;
 }

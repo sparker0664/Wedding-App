@@ -11,7 +11,6 @@
   content: "";
   flex: 1;
   height: 2px;
-  /*noinspection CssUnresolvedCustomProperty*/
   background: linear-gradient(
     to right,
     var(--mantine-color-secondaryGold-0),
@@ -21,7 +20,41 @@
   border-radius: 10px;
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
 .icon {
-  color: var(--mantine-color-secondaryGold-9);
+  color: var(--mantine-color-secondaryGold-5);
+}
+
+.closeButton:hover {
+  background-color: var(--mantine-primary-color-9);
+  color: #ffffff;
+}
+
+.title {
+  font-family: var(--mantine-font-family-headings), serif;
+  color: var(--mantine-primary-color-9);
+  text-align: center;
+  width: 100%;
+}
+
+.revealButton {
+  color: var(--mantine-primary-color-9);
+  background-color: #ffffff;
+  border: var(--mantine-color-secondaryGold-5) 3px solid;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-top: var(--mantine-spacing-xl);
+  width: 75%;
+  height: 5vh;
+  font-family: var(--mantine-font-family-headings),serif;
+  font-size: 2em;
+}
+
+.revealButton:hover {
+  border: var(--mantine-color-secondaryGold-5) 2px solid;
+  background-color: var(--mantine-primary-color-9);
+}
+
+.orderOfTheDay {
+  border: 5px solid var(--mantine-color-secondaryGold-5);
+  border-radius: 10px;
 }

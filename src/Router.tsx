@@ -6,6 +6,7 @@ import ChurchPage from "./features/church";
 import ReceptionPage from "./features/reception";
 import HotelsPage from "./features/hotels";
 import TaxisPage from "./features/taxis";
+import RSVPPage from "./features/RSVP";
 
 export default function Router() {
   return (
@@ -27,6 +28,9 @@ export default function Router() {
         </Route>
         <Route element={<Layout />}>
           <Route path="taxis" element={<TaxisPage />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="rsvp" element={<RSVPPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

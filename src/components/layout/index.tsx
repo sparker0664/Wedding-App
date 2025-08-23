@@ -22,7 +22,7 @@ export default function Layout() {
       padding="md"
       styles={{
         header: {
-          background: "#3b724e",
+          background: "#466851",
           fontFamily: theme.fontFamily,
         },
         main: {
@@ -67,7 +67,6 @@ export default function Layout() {
             <Button className={classes.navButton} component={Link} to={"taxis"}>
               Taxi services
             </Button>
-            <Button className={classes.navButton}>Gift list</Button>
           </Group>
         )}
       </AppShell.Header>
