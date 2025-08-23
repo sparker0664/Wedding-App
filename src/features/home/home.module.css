@@ -21,7 +21,7 @@
 }
 
 .icon {
-  color: var(--mantine-color-secondaryGold-9);
+  color: var(--mantine-color-secondaryGold-5);
 }
 
 .closeButton:hover {
@@ -39,7 +39,7 @@
 .revealButton {
   color: var(--mantine-primary-color-9);
   background-color: #ffffff;
-  border: var(--mantine-color-secondaryGold-9) 3px solid;
+  border: var(--mantine-color-secondaryGold-5) 3px solid;
   border-radius: 20px;
   transition: all 0.3s ease;
   margin-top: var(--mantine-spacing-xl);
@@ -50,11 +50,11 @@
 }
 
 .revealButton:hover {
-  border: var(--mantine-color-secondaryGold-9) 2px solid;
+  border: var(--mantine-color-secondaryGold-5) 2px solid;
   background-color: var(--mantine-primary-color-9);
 }
 
 .orderOfTheDay {
-  border: 5px solid var(--mantine-color-secondaryGold-9);
+  border: 5px solid var(--mantine-color-secondaryGold-5);
   border-radius: 10px;
 }
