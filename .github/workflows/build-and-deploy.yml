@@ -29,18 +29,12 @@ jobs:
       run: |
         npm install
         npm run build
-    
-    - name: 'Debug: Check build output'
-      run: |
-        ls -la ./dist
-        echo "Dist folder contents:"
-        find ./dist -type f | head -10
                
     # Deploy web app using Azure credentials
     - uses: azure/webapps-deploy@v3
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/*
 
     # Azure logout 
     - name: logout
