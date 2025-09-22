@@ -5,12 +5,12 @@ export default function RSVPPage() {
     <Container fluid size={"xl"} w={"100%"}>
       <Box className={classes.iframeContainer}>
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdYX9TlW0Nchedj_7CK-HrVMcXWe5oEdSTbdV6tRazlurBBHA/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckhlfTfSs5YbNJwohaVjbGTWL4Z8DUsflv6_Rt-SKBMAxTnA/viewform?embedded=true"
           width="100%"
           height="75%"
           className={classes.iframe}
         >
-          Loading…
+          Loading…  
         </iframe>
       </Box>
     </Container>

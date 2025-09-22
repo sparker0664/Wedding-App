@@ -67,6 +67,9 @@ export default function Layout() {
             <Button className={classes.navButton} component={Link} to={"taxis"}>
               Taxi services
             </Button>
+            <Button className={classes.navButton} component={Link} to={"rsvp"}>
+              RSVP
+            </Button>
           </Group>
         )}
       </AppShell.Header>
