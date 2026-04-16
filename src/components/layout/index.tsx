@@ -70,6 +70,15 @@ export default function Layout() {
             <Button className={classes.navButton} component={Link} to={"rsvp"}>
               RSVP
             </Button>
+            <Button
+              className={classes.navButton}
+              component="a"
+              href="https://www.marriagegiftlist.com/E5PGQV"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gift List
+            </Button>
           </Group>
         )}
       </AppShell.Header>
