@@ -58,3 +58,36 @@
   border: 5px solid var(--mantine-color-secondaryGold-5);
   border-radius: 10px;
 }
+
+.giftIcon {
+  color: var(--mantine-color-secondaryGold-5);
+  width: 64px;
+  height: 64px;
+}
+
+.giftMessage {
+  font-family: var(--mantine-font-family), serif;
+  color: var(--mantine-primary-color-8);
+  font-size: var(--mantine-font-size-lg);
+  line-height: var(--mantine-line-height-md);
+  text-align: center;
+  padding: 0 var(--mantine-spacing-md);
+}
+
+.giftLinkButton {
+  color: var(--mantine-primary-color-9);
+  background-color: #ffffff;
+  border: var(--mantine-color-secondaryGold-5) 3px solid;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  padding: 0 var(--mantine-spacing-xl);
+  height: 5vh;
+  font-family: var(--mantine-font-family-headings), serif;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.giftLinkButton:hover {
+  border: var(--mantine-color-secondaryGold-5) 2px solid;
+  background-color: var(--mantine-primary-color-9);
+}

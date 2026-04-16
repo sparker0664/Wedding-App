@@ -12,19 +12,22 @@ import {
   em,
   Modal,
   Button,
+  Stack,
 } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import imagePaths from "../../index.ts";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { IconHeart } from "@tabler/icons-react";
+import { IconGift, IconHeart } from "@tabler/icons-react";
 
 export default function HomePage() {
   const autoplay = useRef(Autoplay({ delay: 5000 }));
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const carouselHeight = isMobile ? 200 : 400;
   const [opened, { open, close }] = useDisclosure(false);
+  const [giftListOpened, { open: openGiftList, close: closeGiftList }] =
+    useDisclosure(false);
   const slideshowSlides = imagePaths.map((src) => (
     <Carousel.Slide key={src}>
       <Image src={src.toString()} />
@@ -50,6 +53,43 @@ export default function HomePage() {
         transitionProps={{ transition: "fade-up" }}
       >
         <Image src={timelineImage} />
+      </Modal>
+      <Modal
+        title={<Title>Gift List</Title>}
+        opened={giftListOpened}
+        onClose={closeGiftList}
+        closeOnClickOutside
+        closeOnEscape
+        withCloseButton
+        centered
+        size={"xl"}
+        classNames={{
+          content: localClasses.orderOfTheDay,
+          close: localClasses.closeButton,
+          title: localClasses.title,
+        }}
+        transitionProps={{ transition: "fade-up" }}
+      >
+        <Stack align="center" gap="lg">
+          <IconGift className={localClasses.giftIcon} />
+          <Text className={localClasses.giftMessage}>
+            Your presence on our special day is the greatest gift of all.
+            However, if you would like to give a gift, we have set up a gift
+            list for your convenience.
+          </Text>
+          <div className={localClasses.divider}>
+            <IconHeart className={localClasses.icon} />
+          </div>
+          <Button
+            className={localClasses.giftLinkButton}
+            component="a"
+            href="https://www.marriagegiftlist.com/E5PGQV"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Our Gift List
+          </Button>
+        </Stack>
       </Modal>
       <Container>
         <Title className={classes.title} size={rem(60)}>
@@ -99,9 +139,14 @@ export default function HomePage() {
             </Text>
           </Card>
         </SimpleGrid>
-        <Button className={localClasses.revealButton} onClick={open}>
-          Order of the Day
-        </Button>
+        <Stack align="center" gap={0}>
+          <Button className={localClasses.revealButton} onClick={open}>
+            Order of the Day
+          </Button>
+          <Button className={localClasses.revealButton} onClick={openGiftList}>
+            Gift List
+          </Button>
+        </Stack>
       </Container>
     </>
   );
